@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <link rel="stylesheet" href="name".css">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dilaras Seite</title>
-  </head>
-  <body>
-    <p>Text im Browserfenster</p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickMySheet</title>
+    <link rel="stylesheet" href="name.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="controls">
+            <h2>Lose hinzufügen</h2>
+            <input type="text" id="wordInput" placeholder="Wort eingeben...">
+            <button class="btn add-btn">Hinzufügen</button>
+            
+            <hr>
+            
+            <button class="btn start-btn">Ziehung starten!</button>
+        </aside>
+
+        <main class="drawing-area">
+            <div class="basket">
+                <div class="basket-handle"></div>
+                <div class="basket-body">
+                    <span class="basket-label">Loskorb</span>
+                    </div>
+            </div>
+        </main>
+
+        <aside class="history">
+            <h2>Gezogene Lose</h2>
+            <ul id="logList">
+                <li>Los 1</li>
+                <li>Los 2</li>
+            </ul>
+            <div class="save-actions">
+                <button class="btn save-btn">Speichern</button>
+                <button class="btn load-btn">gespeicherte Listen</button>
+            </div>
+        </aside>
+    </div>
+
+</body>
 </html>
