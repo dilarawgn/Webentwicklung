@@ -1,4 +1,5 @@
-/* Grunddesign */body {
+/* Grunddesign */
+body {
     font-family: sans-serif;
     background-color: #3dbb6b;
     display: flex;
@@ -16,7 +17,6 @@
     height: 70vh;
 }
 
-/* Seitenspalten */
 aside {
     background: rgb(146, 221, 161);
     padding: 25px;
@@ -84,7 +84,7 @@ input {
 .save-btn { background-color: #4c5a7798; color: white; margin-top: auto; margin-bottom: 5px; }
 .load-btn { background-color: #383b40; color: white; }
 
-/* Der Korb in der Mitte */
+/* Der Korb */
 .drawing-area {
     display: flex;
     flex-direction: column;
@@ -94,23 +94,23 @@ input {
 
 .basket {
     position: relative;
-    width: 200px;
-    height: 150px;
-    background: #d35400; /* Korb-Farbe */
-    border-radius: 0 0 50px 50px;
-    border: 8px solid #a04000;
+    width: 300px;  
+    height: 220px; 
+    background: #d35400; 
+    border-radius: 0 0 80px 80px; 
+    border: 10px solid #a04000;   
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.244);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 .basket-handle {
     position: absolute;
-    top: -50px;
-    width: 120px;
-    height: 80px;
-    border: 8px solid #a04000;
+    top: -80px;    
+    width: 180px;  
+    height: 120px; 
+    border: 10px solid #a04000;
     border-radius: 50% 50% 0 0;
     z-index: -1;
 }
@@ -122,7 +122,6 @@ input {
     letter-spacing: 1px;
 }
 
-/* Historie-Liste */
 ul {
     padding: 0;
     overflow-y: auto;
