@@ -1,7 +1,6 @@
 /* Grunddesign */body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     background-color: #3dbb6b;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,18 +10,17 @@
 .container {
     display: grid;
     grid-template-columns: 250px 1fr 250px;
-    gap: 20px;
-    width: 95%;
+    gap: 30px;
+    width: 80%;
     max-width: 1200px;
-    height: 80vh;
+    height: 70vh;
 }
 
 /* Seitenspalten */
 aside {
     background: rgb(146, 221, 161);
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
 }
@@ -32,13 +30,13 @@ h2 { font-size: 1.2rem; color: #333; }
 /* Eingabefelder & Buttons */
 input {
     padding: 10px;
-    border: 2px solid #ddd;
+    border: 2px solid #878383;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
 .btn {
-    padding: 12px;
+    padding: 13px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -46,12 +44,12 @@ input {
     transition: transform 0.1s;
 }
 
-.btn:active { transform: scale(0.95); }
+.btn:active { transform: scale(0.93); }
 
-.add-btn { background-color: #4CAF50; color: white; }
+.add-btn { background-color: #3e793fe1; color: white; }
 .start-btn { background-color: #ff4757; color: white; margin-top: 20px; font-size: 1.1rem; }
-.save-btn { background-color: #2f3542; color: white; margin-top: auto; margin-bottom: 5px; }
-.load-btn { background-color: #747d8c; color: white; }
+.save-btn { background-color: #4c5a7798; color: white; margin-top: auto; margin-bottom: 5px; }
+.load-btn { background-color: #383b40; color: white; }
 
 /* Der Korb in der Mitte */
 .drawing-area {
@@ -71,7 +69,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.244);
 }
 
 .basket-handle {
@@ -85,7 +83,7 @@ input {
 }
 
 .basket-label {
-    color: white;
+    color: rgb(255, 149, 78);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -93,7 +91,6 @@ input {
 
 /* Historie-Liste */
 ul {
-    list-style: none;
     padding: 0;
     overflow-y: auto;
 }
@@ -101,7 +98,7 @@ ul {
 li {
     background: #f1f2f6;
     padding: 8px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     border-radius: 5px;
     font-size: 0.9rem;
 }
