@@ -134,3 +134,52 @@ li {
     border-radius: 5px;
     font-size: 0.9rem;
 }
+
+/* TABLET-ANSICHT */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 1fr; 
+        width: 95%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    aside:last-child {
+        grid-column: span 2;
+    }
+}
+
+/* HANDY-ANSICHT */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        height: auto;
+    }
+
+    aside, aside:last-child {
+        grid-column: span 1; 
+    }
+
+    .basket {
+        width: 250px;
+        height: 180px;
+    }
+
+    .basket-handle {
+        width: 140px;
+        height: 100px;
+        top: -60px;
+    }
+
+    .drawing-area {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
