@@ -21,13 +21,12 @@ aside {
     background: rgb(146, 221, 161);
     padding: 25px;
     border-radius: 15px;
-    display: flex;
     flex-direction: column;
 }
 
 h2 { font-size: 1.2rem; color: #333; }
 
-/* Eingabefelder & Buttons */
+/* eingabefelder & buttons */
 input {
     padding: 10px;
     border: 2px solid #878383;
@@ -54,7 +53,6 @@ input {
     flex-direction: column;
     max-height: 200px; 
 }
-
 .input-preview h3 {
     font-size: 0.9rem;
     margin: 0 0 5px 0;
@@ -84,7 +82,7 @@ input {
 .save-btn { background-color: #4c5a7798; color: white; margin-top: auto; margin-bottom: 5px; }
 .load-btn { background-color: #383b40; color: white; }
 
-/* Der Korb */
+/* der korb */
 .drawing-area {
     display: flex;
     flex-direction: column;
@@ -135,7 +133,7 @@ li {
     font-size: 0.9rem;
 }
 
-/* TABLET-ANSICHT */
+/* tablet ansiht */
 @media (max-width: 1024px) {
     .container {
         grid-template-columns: 1fr 1fr; 
@@ -149,7 +147,7 @@ li {
     }
 }
 
-/* HANDY-ANSICHT */
+/* handy ansicht*/
 @media (max-width: 768px) {
     body {
         height: auto;
