@@ -9,41 +9,55 @@
 <body>
     <div class="container">
         <aside class="controls">
-        <h2>Lose hinzufügen</h2>
-        <input type="text" id="wordInput" placeholder="Wort eingeben...">
-         <button class="btn add-btn">Hinzufügen</button>
+            <h2>Lose hinzufügen</h2>
+            <input type="text" id="wordInput" placeholder="Wort eingeben...">
+            <button class="btn add-btn">Hinzufügen</button>
 
-        <div class="input-preview">
-        <h3>Lose im Korb:</h3>
-        <ul id="previewList">
-            <li>...</li>
-            </ul>
-    </div>
-        <button class="btn start-btn">Ziehung starten!</button>
+            <div class="input-preview">
+                <h3>Lose im Korb:</h3>
+                <ul id="previewList">
+                    <li>...</li>
+                </ul>
+            </div>
+            <button class="btn start-btn">Ziehung starten!</button>
         </aside>
 
             <main class="drawing-area">
                 <div class="basket">
                     <div class="basket-handle"></div>
-                    <div class="basket-body">
+                     <div class="basket-body">
                         <span class="basket-label">Loskorb</span>
-                    </div>
+                     </div>
                 </div>
-            </main>
+             </main>
 
-        <aside class="history">
-            <h2>Gezogene Lose</h2>
-            <ul id="logList">
-                <li>Los 1</li>
-                <li>Los 2</li>
-                <li>Los X</li>
-            </ul>
-            <div class>
+            <aside class="history">
+                 <h2>Gezogene Lose</h2>
+                 <ul id="logList">
+                    <li>Los 1</li>
+                     <li>Los 2</li>
+                     <li>Los X</li>
+                 </ul>
+            
+            <div class="save-overview">
+                <small>Neue Liste hinzufügen:</small>
+                <input type="text" id="saveListName" placeholder="Name eingeben...">
                 <button class="btn save-btn">Speichern</button>
-                <button class="btn load-btn">gespeicherte Listen</button>
+            </div>
+
+            <div class="saved-lists-header">Gespeicherte Listen:</div>
+            <div id="savedListsContainer" class="saved-lists-area">
+                <ul id="actualSavedLists">
+                    <li>
+                        <span>Liste_01</span>
+                        <div class="list-item-btns">
+                            <button class="mini-load-btn">Laden</button>
+                            <button class="mini-delete-btn">×</button>
+                        </div>
+                    </li>
+                    </ul>
             </div>
         </aside>
     </div>
-
 </body>
 </html>
