@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PickMySheet</title>
     <link rel="stylesheet" href="name.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <aside class="controls">
             <h2>Lose hinzufügen</h2>
             <input type="text" id="wordInput" placeholder="Wort eingeben...">
-            <button class="btn add-btn">Hinzufügen</button>
+            <button class="btn add-btn" id="addButton">Hinzufügen</button>
 
             <div class="input-preview">
-                <h3>Lose im Korb:</h3>
-                <ul id="previewList">
-                    <li>...</li>
-                </ul>
+                <h3 id="meinText">Lose im Korb: </h3>
             </div>
             <button class="btn start-btn">Ziehung starten!</button>
         </aside>
