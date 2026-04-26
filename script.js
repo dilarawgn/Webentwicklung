@@ -1,4 +1,5 @@
-// Hilfe von KI //
+// Hilfe von KI 
+
 // --- Variablen & Daten ---
 let aktuelleLose = [];
 let gezogeneLoseHistorie = []; 
@@ -27,7 +28,6 @@ window.onload = () => {
 };
 
 // --- 1. LOSE HINZUFÜGEN & ENTFERNEN ---
-
 addButton.addEventListener('click', () => {
     const val = wordInput.value.trim();
     if (val !== "") {
@@ -45,7 +45,7 @@ function displayLose() {
         const li = document.createElement('li');
         li.textContent = los.text;
         li.style.backgroundColor = los.farbe;
-        li.style.color = "white"; // Textfarbe immer weiß
+        li.style.color = "white"; // Textfarbe weiß
         
         // Klick-Event zum Löschen einzelner Lose im Korb
         li.addEventListener('click', function() {
@@ -58,7 +58,6 @@ function displayLose() {
 }
 
 // --- 2. ZIEHUNG STARTEN (ANIMATION & HISTORIE) ---
-
 drawButton.addEventListener('click', () => {
     if (aktuelleLose.length === 0) {
         alert("Der Korb ist leer! Bitte füge erst Lose hinzu.");
@@ -101,16 +100,15 @@ function createFlyingTicket(farbe) {
 }
 
 // --- 3. SPEICHERN DER GEZOGENEN LOSE (ARCHIV) ---
-
 saveBtn.addEventListener('click', () => {
     const name = saveListNameInput.value.trim();
     
     if (name === "") {
-        alert("Bitte gib einen Namen für deine Ergebnis-Liste ein!");
+        alert("Bitte gib einen Namen für deine Liste ein!");
         return;
     }
     if (gezogeneLoseHistorie.length === 0) {
-        alert("Du musst erst Lose ziehen, bevor du ein Ergebnis speichern kannst!");
+        alert("Du musst erst Lose ziehen, bevor du eine Liste speichern kannst!");
         return;
     }
 
@@ -142,7 +140,6 @@ function displayArchiv() {
 }
 
 // --- DATEN-SICHERUNG (LOCAL STORAGE) ---
-
 function saveToLocalStorage() {
     // Archiv-Array in JSON-String umwandeln und speichern
     localStorage.setItem('pickMySheet_Archiv', JSON.stringify(archiv));

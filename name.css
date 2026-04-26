@@ -295,20 +295,29 @@ li {
  /* Hilfe von KI */
     /* Die Animation */
 .flying-ticket {
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    width: 40px;
-    height: 20px;
-    border-radius: 3px;
-    z-index: 100;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-    pointer-events: none;
-    animation: popOut 0.8s ease-out forwards;
+    position: absolute;                         /* Löst das Element aus dem Textfluss für freie Bewegung */
+    left: 50%;                                  /* Startet horizontal genau in der Mitte des Containers */
+    top: 20%;                                   /* Startet bei 20% der Höhe des Korb-Bereichs */
+    width: 40px;                                /* Legt die Breite des kleinen Los-Zettels fest */
+    height: 20px;                               /* Legt die Höhe des kleinen Los-Zettels fest */
+    border-radius: 3px;                         /* Rundet die Ecken leicht ab (Papier-Optik) */
+    z-index: 100;                               /* Schiebt das Element in den Vordergrund über alles andere */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);    /* Erzeugt einen Schatten für einen 3D-Effekt beim Fliegen */
+    pointer-events: none;                       /* Verhindert, dass das Ticket Klicks abfängt (nur Dekoration) */
+    animation: popOut 0.8s ease-out forwards;   /* Startet Animation: 0.8 Sek, wird zum Ende hin sanfter */
 }
 
 @keyframes popOut {
-    0% { transform: translate(-50%, 0) scale(0.5); opacity: 0; }
-    50% { opacity: 1; transform: translate(-50%, -120px) scale(1.2); }
-    100% { transform: translate(50px, -200px) rotate(45deg); opacity: 0; }
+    0% { 
+        transform: translate(-50%, 0) scale(0.5); /* Start: Zentriert, am Boden, nur halb so groß */
+        opacity: 0;                               /* Start: Komplett unsichtbar */
+    }
+    50% { 
+        opacity: 1;                               /* Mitte: Volle Sichtbarkeit erreicht */
+        transform: translate(-50%, -120px) scale(1.2); /* Mitte: Schießt 120px hoch und wird kurz größer */
+    }
+    100% { 
+        transform: translate(50px, -200px) rotate(45deg); /* Ende: Fliegt nach rechts oben und dreht sich */
+        opacity: 0;                               /* Ende: Wird wieder unsichtbar und verschwindet */
+    }
 }
