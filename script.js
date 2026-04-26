@@ -1,3 +1,4 @@
+// Hilfe von KI //
 // --- Variablen & Daten ---
 let aktuelleLose = [];
 let gezogeneLoseHistorie = []; 

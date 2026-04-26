@@ -249,36 +249,36 @@ li {
     .drawing-area { order: -1; margin-bottom: 30px; }
 }
 
+/* neu */
 
 #meinText {
     display: flex;
-    flex-wrap: wrap;      /* Lose brechen in die nächste Zeile um */
-    gap: 5px;             /* Weniger Abstand zwischen den Losen */
+    flex-wrap: wrap;    
+    gap: 5px;             
     padding: 5px;
     margin: 0;
     list-style: none;
-    overflow-y: auto;     /* Nur vertikales Scrollen erlauben */
-    overflow-x: hidden;    /* Horizontales Scrollen verbieten */
-    width: 100%;          /* Nutzt die Breite des Containers */
+    overflow-y: auto;     
+    overflow-x: hidden;    
+    width: 100%;        
     box-sizing: border-box;
 }
 
 #meinText li {
-    padding: 4px 8px;     /* Kleineres Padding für kleinere Lose */
+    padding: 4px 8px;
     border-radius: 4px;
-    font-size: 0.75rem;    /* Kleinere Schrift */
+    font-size: 0.75rem;   
     font-weight: bold;
-    color: white !important;
+    color: white;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     border: 1px solid rgba(0,0,0,0.1);
-    max-width: fit-content; /* Los passt sich dem Text an */
-    white-space: nowrap;    /* Text im Los bricht nicht um */
+    max-width: fit-content; 
+    white-space: nowrap;    
     cursor: pointer;
     position: relative;
-    padding-right: 20px;   /* Platz für das X */
+    padding-right: 20px;   
 }
 
-/* Das Lösch-X etwas kleiner machen */
 #meinText li::after {
     content: "×";
     position: absolute;
@@ -287,13 +287,13 @@ li {
     transform: translateY(-50%);
     font-size: 0.9rem;
 }
-/* Der Korb muss relative sein, damit die Animation darin startet */
+
 .basket {
     position: relative; 
-    /* ... restlicher basket code bleibt gleich ... */
 }
 
-/* Die Animation */
+ /* Hilfe von KI */
+    /* Die Animation */
 .flying-ticket {
     position: absolute;
     left: 50%;
