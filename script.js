@@ -142,7 +142,10 @@ function displayArchiv() {
 // --- DATEN-SICHERUNG (LOCAL STORAGE) ---
 function saveToLocalStorage() {
     // Archiv-Array in JSON-String umwandeln und speichern
-    localStorage.setItem('pickMySheet_Archiv', JSON.stringify(archiv));
+    localStorage.setItem('pickMySheet_Archiv', JSON.stringify(archiv)); 
+    sendJsonWithPOST(
+  'http://localhost:3000/',
+  JSON.stringify(archiv));
 }
 
 function loadFromLocalStorage() {
@@ -174,3 +177,8 @@ window.deleteList = function(index) {
         displayArchiv();
     }
 };
+async function sendJsonWithPOST(url, jsonString) {
+  const response = await fetch(url, {
+    method: 'post',
+    body: jsonString,
+  }); }
