@@ -117,7 +117,12 @@ saveBtn.addEventListener('click', () => {
         Listenname: name,
         Liste: [...gezogeneLoseHistorie] 
     });
-    
+    sendJsonWithPOST(
+  'http://localhost:3000/',
+  JSON.stringify({
+        Listenname: name,
+        Liste: [...gezogeneLoseHistorie] 
+    }));
     saveToLocalStorage(); // Im Browser-Speicher sichern
     saveListNameInput.value = "";
     displayArchiv();
@@ -143,16 +148,22 @@ function displayArchiv() {
 function saveToLocalStorage() {
     // Archiv-Array in JSON-String umwandeln und speichern
     localStorage.setItem('pickMySheet_Archiv', JSON.stringify(archiv)); 
-    sendJsonWithPOST(
-  'http://localhost:3000/',
-  JSON.stringify(archiv));
+    
 }
 
-function loadFromLocalStorage() {
+/*function loadFromLocalStorage() {
     const savedData = localStorage.getItem('pickMySheet_Archiv');
     if (savedData) {
         archiv = JSON.parse(savedData);
     }
+}*/
+async function requestJsonWithGET(url) {
+  const response = await fetch(url);
+  console.log('Response:', response);
+  const jsonData = await response.json();
+  console.log('JSON Daten:', jsonData);
+  const parseJson = JSON.parse(jsonData);
+  console.log('JS Objekt aus JSON Daten:', parseJson);
 }
 
 // Lädt eine gespeicherte Ergebnis-Liste zurück in die rechte Historie-Anzeige
